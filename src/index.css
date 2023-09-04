@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  html,
+  body,
+  #root {
+    @apply m-0 w-full h-full bg-bgColor flex justify-center items-center
+  }
+}
+
+@layer components {
+  .App {
+    @apply flex justify-center items-center
+  }
+
+  .Card {
+    @apply w-96 bg-cardbg rounded-3xl flex flex-col items-center justify-center p-5
+  }
+
+  .qrCard {
+    @apply bg-cardQrBg rounded-3xl m-2 flex justify-center items-center w-full pt-12 pb-12 relative
+  }
+  .qrCard .qrcode{
+    @apply hover:scale-105 transition-all duration-100
+  }
+  .qrCard .qrinput {
+    @apply  absolute bottom-[-1rem] transition-all duration-100 scale-0 absolute origin-bottom flex justify-center items-center
+  }
+  .qrinput input{
+    @apply w-40 mt-5  mr-3 rounded-full
+  }
+ 
+  .cardText {
+    @apply flex flex-col justify-center items-center text-center p-4 gap-3
+  }
+
+  .cardText h1 {
+    @apply text-boldText text-2xl font-sans font-bold
+  }
+
+  .cardText h3 {
+    @apply text-pragraph text-xl m-2 text-center
+  }
+}
